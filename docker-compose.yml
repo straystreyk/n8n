@@ -13,7 +13,7 @@ services:
     env_file:
       - .env
     volumes:
-      - n8n_data:/home/node/.n8n
+      - ./n8n_data:/home/node/.n8n
       - ./local-files:/files
     networks:
       - n8nnet
