@@ -13,6 +13,8 @@ services:
       - VUE_APP_URL_BASE_API=${VUE_APP_URL_BASE_API}
       - WEBHOOK_URL=${WEBHOOK_URL}
       - N8N_SECURE_COOKIE=true
+      - N8N_RUNNERS_ENABLED=true
+      - N8N_PROXY_HOPS=1
       - GENERIC_TIMEZONE=Europe/Moscow
     env_file:
       - .env
