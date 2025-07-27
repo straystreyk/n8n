@@ -10,6 +10,8 @@ services:
       - WEBHOOK_URL=${WEBHOOK_URL}
       - N8N_SECURE_COOKIE=true
       - GENERIC_TIMEZONE=Europe/Moscow
+    env_file:
+      - .env
     volumes:
       - ./n8n_data:/home/node/.n8n
     networks:
