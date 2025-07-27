@@ -1,0 +1,19 @@
+services:
+  n8n:
+    image: n8nio/n8n:${N8N_VERSION}
+    restart: unless-stopped
+    ports:
+      - 5678:5678
+    environment:
+      - N8N_BASIC_AUTH_USER=${N8N_BASIC_AUTH_USER}
+      - N8N_BASIC_AUTH_PASSWORD=${N8N_BASIC_AUTH_PASSWORD}
+      - WEBHOOK_URL=${WEBHOOK_URL}
+      - N8N_SECURE_COOKIE=true
+      - GENERIC_TIMEZONE=Europe/Moscow
+    volumes:
+      - ./n8n_data:/home/node/.n8n
+    networks:
+      - n8nnet
+
+networks:
+  n8nnet:
