@@ -22,3 +22,6 @@ services:
 
 networks:
   n8nnet:
+
+volumes:
+  n8n_storage:
