@@ -12,8 +12,9 @@ services:
       - GENERIC_TIMEZONE=Europe/Moscow
     env_file:
       - .env
-#    volumes:
-#      - ./n8n_data:/home/node/.n8n
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - ./local-files:/files
     networks:
       - n8nnet
 
